@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">MyWeather</string>
+    <string name="china">中国</string>
+    <string name="load_fail">加载失败</string>
+</resources>

@@ -1,0 +1,9 @@
+<litepal>
+    <dbname value="myweather" />
+    <version value="1"/>
+    <list>
+        <mapping class="org.prv.weather.db.Province" />
+        <mapping class="org.prv.weather.db.City" />
+        <mapping class="org.prv.weather.db.Country" />
+    </list>
+</litepal>
