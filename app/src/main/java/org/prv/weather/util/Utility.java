@@ -2,12 +2,15 @@ package org.prv.weather.util;
 
 import android.text.TextUtils;
 
+import com.google.gson.Gson;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 import org.prv.weather.db.City;
 import org.prv.weather.db.Country;
 import org.prv.weather.db.Province;
+import org.prv.weather.gson.Weather;
 
 public class Utility {
     public static boolean handleProvinceResponse(String response) {
@@ -69,5 +72,17 @@ public class Utility {
             }
         }
         return false;
+    }
+
+    public static Weather handleWeatherReponse(String response) {
+        try {
+            JSONObject jsonObject = new JSONObject(response);
+            JSONArray jsonArray = jsonObject.getJSONArray("HeWeather");
+            String weatherContent = jsonArray.getJSONObject(0).toString();
+            return new Gson().fromJson(weatherContent,Weather.class);
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        return null;
     }
 }

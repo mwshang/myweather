@@ -2,4 +2,7 @@
     <string name="app_name">MyWeather</string>
     <string name="china">中国</string>
     <string name="load_fail">加载失败</string>
+    <string name="forecast">预报</string>
+    <string name="air_quality">空气质量</string>
+    <string name="life_suggestion">生活建议</string>
 </resources>
