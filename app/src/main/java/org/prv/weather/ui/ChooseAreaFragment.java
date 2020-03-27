@@ -95,8 +95,6 @@ public class ChooseAreaFragment extends Fragment {
                         WeatherActivity activity = (WeatherActivity)getActivity();
                         activity.requestWeather(weatherId,true);
                     }
-
-
                 }
             }
         });
